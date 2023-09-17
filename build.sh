@@ -1,0 +1,1 @@
+docker build -t devbase:1.21.1 -f ubuntu2204.Dockerfile .

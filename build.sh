@@ -1,1 +1,1 @@
-docker build -t devbase:1.21.4 .
+docker build -t devbase:1.23.3 .

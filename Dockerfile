@@ -9,13 +9,13 @@ RUN apt update \
     && echo "PubkeyAuthentication yes" >> /etc/ssh/sshd_config \
     && mkdir /run/sshd \
     && mkdir /root/.ssh \
-    && wget https://go.dev/dl/go1.21.4.linux-amd64.tar.gz \
-    && rm -rf /usr/local/go && tar -C /usr/local -xzf go1.21.4.linux-amd64.tar.gz \
+    && wget https://go.dev/dl/go1.23.3.linux-amd64.tar.gz \
+    && rm -rf /usr/local/go && tar -C /usr/local -xzf go1.23.3.linux-amd64.tar.gz \
     && echo "PATH=$PATH:/usr/local/go/bin" >> /etc/profile \
     && chmod u+x /run.sh \
     && /usr/local/go/bin/go env -w GO111MODULE=on \
     && /usr/local/go/bin/go env -w GOPROXY=https://goproxy.cn,direct
-    
+
 ENV TZ=Asia/Shanghai
 ENV GIT_USER_NAME=git
 ENV GIT_USER_EMAIL=git@localhost
